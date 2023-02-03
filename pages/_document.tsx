@@ -1,15 +1,25 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document'
 
-const Document = () => {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
+class CustomDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+    const initialProps = await Document.getInitialProps(ctx)
+
+    return initialProps
+  }
+
+  render() {
+    return (
+      <Html lang="ko">
+        <Head>
+          <meta name="description" content="포트폴리오" />
+        </Head>
+        <body>
+          <Main />
+        </body>
         <NextScript />
-      </body>
-    </Html>
-  )
+      </Html>
+    )
+  }
 }
 
-export default Document
+export default CustomDocument
