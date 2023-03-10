@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 폰트 */
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/public/fonts/NanumSquareR.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: light;
+  font-weight: 200;
+  src: url('/public/fonts/NanumSquareL.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: bold;
+  font-weight: 700;
+  src: url('/public/fonts/NanumSquareB.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: bold;
+  font-weight: 900;
+  src: url('/public/fonts/NanumSquareEB.otf') format('otf');
+}
+
+/* 레이아웃 */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'NanumSquare', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dfcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dfc {
+  display: flex;
+  align-items: center;
+}
+.fwl {
+  font-weight: 200;
+}
+.fweb {
+  font-weight: 900;
+}
+.fwb {
+  font-weight: 700;
+}
+.fweb {
+  font-weight: 900;
+}
+.transparent {
+  opacity: 0 !important;
+}
+.ease {
+  transition: 0.3s ease;
+}

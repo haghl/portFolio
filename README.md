@@ -1,4 +1,4 @@
-# 원동규의 포트폴리오
+# 원동규의 블로그 (🔧 만드는중)
 
 <div align="center">
 	<img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=Next.js&logoColor=white" />
