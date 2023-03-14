@@ -3,9 +3,11 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header>
-      <div className="header">
-        <Link href="/">Logo</Link>
+    <header className="w-full fixed">
+      <div className="max-w-screen-lg h-header mx-auto dfc justify-between">
+        <Link href="/" className="font-bold text-head_lg">
+          Logo
+        </Link>
       </div>
     </header>
   )
