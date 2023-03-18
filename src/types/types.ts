@@ -1,12 +1,9 @@
 import { MultiSelectPropertyItemObjectResponse, SelectPropertyItemObjectResponse } from '@notionhq/client/build/src/api-endpoints'
-import { COLOR_TABLE } from '@/styles/notion.style'
 
 type StringRequest = string
-type SelectColor = 'default' | 'gray' | 'brown' | 'orange' | 'yellow' | 'green' | 'blue' | 'purple' | 'pink' | 'red'
 export type SelectPropertyResponse = {
   id: StringRequest
   name: StringRequest
-  color: SelectColor
 }
 
 export type IIcon =
@@ -21,7 +18,7 @@ export type IIcon =
     }
   | null
 
-export interface IDevLogData {
+export interface IPosts {
   id: string
   cover: string
   title: string
@@ -33,10 +30,9 @@ export interface IDevLogData {
 export interface ITag {
   id?: string
   name: string
-  color: keyof typeof COLOR_TABLE
 }
 
-export interface IBlogData {
+export interface IBlogInfo {
   title: string
   description: string
   coverURL: string
