@@ -37,7 +37,7 @@
     "default-param-last": "off",
     "no-console": "off",
     "import/no-cycle": "off",
-    "import/no-unresolved": "off", // webpack alias
+    "import/no-unresolved": "off",
     "dot-notation": "off",
     "no-alert": "off",
     "import/extensions": "off",
@@ -53,6 +53,7 @@
     "no-plusplus": "off",
     "@typescript-eslint/return-await": "off",
     "@typescript-eslint/no-misused-promises": "off",
-    "no-restricted-exports": "off"
+    "no-restricted-exports": "off",
+    "no-nested-ternary": "off"
   }
 }
