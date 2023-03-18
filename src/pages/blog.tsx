@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import type { GetStaticProps } from 'next'
 
@@ -5,6 +6,7 @@ import Heads from '@/components/common/Head'
 import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems.tsx'
 import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
 import { initBlogInfo } from '@/notion/notion'
+import { POSTS_PER_PAGE } from '@/notion/config'
 import { IBlogInfo, IPosts } from '@/types/types'
 
 interface IBlog {
@@ -17,6 +19,11 @@ const Blog = ({ data, blogData }: IBlog) => {
   const currentPage = query.page ? parseInt(query.page.toString(), 10) : 1
   const [postData, setPostData] = useState(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
   const [postCount] = useState(data.length)
+
+  useEffect(() => {
+    setPostData(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
+  }, [currentPage, data])
+
   return (
     <>
       <Heads />
