@@ -30,30 +30,30 @@ export interface DatabaseQueryOption {
 export const getDatabaseItems = async (databaseId: string, option?: DatabaseQueryOption) => {
   const databaseItems = await notion.databases.query({
     database_id: databaseId,
-    filter: {
-      and: [
-        {
-          property: propertyTable.Published,
-          status: {
-            // 공개인 포스팅만 가져오기
-            equals: '공개',
-          },
-        },
-        {
-          property: propertyTable.Category,
-          select: {
-            equals: option?.categoryName ? option.categoryName : '',
-          },
-        },
-      ],
-    },
-    sorts: [
-      {
-        // 작성일 기준 정렬
-        property: propertyTable.Date,
-        direction: 'descending',
-      },
-    ],
+    // filter: {
+    //   and: [
+    //     {
+    //       property: propertyTable.Published,
+    //       status: {
+    //         // 공개인 포스팅만 가져오기
+    //         equals: '공개',
+    //       },
+    //     },
+    //     {
+    //       property: propertyTable.Category,
+    //       select: {
+    //         equals: option?.categoryName ? option.categoryName : '',
+    //       },
+    //     },
+    //   ],
+    // },
+    // sorts: [
+    //   {
+    //     // 작성일 기준 정렬
+    //     property: propertyTable.Date,
+    //     direction: 'descending',
+    //   },
+    // ],
   })
   return databaseItems.results
 }

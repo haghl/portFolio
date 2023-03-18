@@ -24,6 +24,8 @@ const Blog = ({ data, blogData }: IBlog) => {
     setPostData(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
   }, [currentPage, data])
 
+  console.log(postData)
+
   return (
     <>
       <Heads />
