@@ -22,7 +22,7 @@ export interface IPosts {
   id: string
   cover: string
   title: string
-  category: SelectPropertyItemObjectResponse['select'] | null
+  category: SelectPropertyResponse | null
   published: string
   tags: MultiSelectPropertyItemObjectResponse['multi_select']
 }
