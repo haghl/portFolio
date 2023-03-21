@@ -5,30 +5,22 @@
 /* 폰트 */
 @font-face {
   font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/public/fonts/NanumSquareR.otf') format('otf');
+  src: url('/fonts/NanumSquareR.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'NanumSquare';
-  font-style: light;
-  font-weight: 200;
-  src: url('/public/fonts/NanumSquareL.otf') format('otf');
+  font-family: 'NanumSquareL';
+  src: url('/fonts/NanumSquareL.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'NanumSquare';
-  font-style: bold;
-  font-weight: 700;
-  src: url('/public/fonts/NanumSquareB.otf') format('otf');
+  font-family: 'NanumSquareB';
+  src: url('/fonts/NanumSquareB.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'NanumSquare';
-  font-style: bold;
-  font-weight: 900;
-  src: url('/public/fonts/NanumSquareEB.otf') format('otf');
+  font-family: 'NanumSquareEB';
+  src: url('/fonts/NanumSquareEB.otf') format('opentype');
 }
 
 /* 레이아웃 */
@@ -36,7 +28,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'NanumSquare', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'NanumSquare';
+  font-size: 16px;
   color: #191f28;
   overflow-y: auto;
   overflow-x: hidden;
@@ -57,20 +50,49 @@ a {
   align-items: center;
 }
 .fwl {
-  font-weight: 200;
-}
-.fweb {
-  font-weight: 900;
+  font-family: 'NanumSquareL';
 }
 .fwb {
-  font-weight: 700;
+  font-family: 'NanumSquareB';
 }
 .fweb {
-  font-weight: 900;
+  font-family: 'NanumSquareEB';
 }
 .transparent {
   opacity: 0 !important;
 }
 .ease {
   transition: 0.3s ease;
+}
+
+/* 카테고리 */
+.CategoryItem.Active {
+  border-color: #3182f6;
+}
+.CategoryItem.Active a {
+  color: #3182f6;
+}
+.CategoryItem:not(.Active):hover a {
+  animation: font-color-change 2s infinite;
+}
+
+@keyframes font-color-change {
+  25% {
+    color: #26b0fa;
+  }
+  50% {
+    color: #3182f6;
+  }
+  75% {
+    color: #26b0fa;
+  }
+}
+
+/* 메인 그리드 */
+.PostListItem {
+  width: calc(33.3333% - 10px);
+}
+.Img img {
+  width: 100%;
+  height: 200px;
 }

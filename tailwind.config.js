@@ -39,6 +39,7 @@ const theme = {
     },
     width: {
       full: '100%',
+      half: '50%',
     },
     height: {
       header: layout.header,
@@ -64,6 +65,7 @@ const theme = {
       md: '8px',
       lg: '12px',
       xlg: '16px',
+      category: '22px',
       header: layout.header,
     },
     boxShadow: {

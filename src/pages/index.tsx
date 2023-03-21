@@ -3,11 +3,13 @@ import { useRouter } from 'next/router'
 import type { GetStaticProps } from 'next'
 
 import PageHead from '@/components/common/PageHead'
-import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems.tsx'
+import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
 import { initBlogInfo } from '@/notion/notion'
 import { POSTS_PER_PAGE } from '@/notion/config'
 import { IBlogInfo, IPosts } from '@/types/types'
+import Category from '@/components/views/Category'
+import PostList from '@/components/views/PostList'
 
 interface IBlog {
   data: IPosts[]
@@ -18,25 +20,18 @@ const Home = ({ data, blogData }: IBlog) => {
   const { query } = useRouter()
   const currentPage = query.page ? parseInt(query.page.toString(), 10) : 1
   const [postData, setPostData] = useState(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
-  const [postCount] = useState(data.length)
 
   useEffect(() => {
     setPostData(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
   }, [currentPage, data])
 
+  console.log(postData)
+
   return (
     <>
       <PageHead />
-      <div>
-        {postData.map((x) => {
-          return (
-            <div key={x.id}>
-              <p>{x.title}</p>
-              <p>{x.category?.name}</p>
-            </div>
-          )
-        })}
-      </div>
+      <Category category={blogData.category?.options} />
+      <PostList data={postData} />
     </>
   )
 }
