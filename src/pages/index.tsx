@@ -25,7 +25,9 @@ const Home = ({ data, blogData }: IBlog) => {
     setPostData(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
   }, [currentPage, data])
 
-  console.log(postData)
+  useEffect(() => {
+    console.log(postData)
+  }, [])
 
   return (
     <>

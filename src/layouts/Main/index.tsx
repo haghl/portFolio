@@ -21,7 +21,7 @@ const Main = ({ children }: { children: ReactNode }) => {
   }, [])
 
   return (
-    <motion.main {...MainAnimation} key={route} className="h-main pt-header">
+    <motion.main {...MainAnimation} key={`main_${route}`} className="pt-header pb-[100px]">
       <div className="h-[300px] bg-primary">배너</div>
       <div className="max-w-screen-lg mt-[50px] mx-auto">{children}</div>
     </motion.main>

@@ -60,6 +60,13 @@ const theme = {
       md: '16px',
       sm: '14px',
     },
+    margin: {
+      sm: '4px',
+      md: '8px',
+      lg: '12px',
+      xlg: '16px',
+      auto: 'auto',
+    },
     padding: {
       sm: '4px',
       md: '8px',
