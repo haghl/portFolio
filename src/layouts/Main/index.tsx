@@ -6,7 +6,7 @@ import { pages } from '@/router'
 import { MainAnimation, xWidth } from './framer'
 
 const Main = ({ children }: { children: ReactNode }) => {
-  const { events, route } = useRouter()
+  const { events, query } = useRouter()
 
   const handleStart = useCallback((nextPath: string) => {
     const currentPath = window.location.pathname
@@ -21,7 +21,7 @@ const Main = ({ children }: { children: ReactNode }) => {
   }, [])
 
   return (
-    <motion.main {...MainAnimation} key={`main_${route}`} className="pt-header pb-[100px]">
+    <motion.main {...MainAnimation} className="pt-header pb-[100px]">
       <div className="h-[300px] bg-primary">배너</div>
       <div className="max-w-screen-lg mt-[50px] mx-auto">{children}</div>
     </motion.main>
