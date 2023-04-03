@@ -24,9 +24,9 @@ const PostList = ({ data }: IPostList) => {
               <p className="mt-sm fweb text-head_sm truncate">{x.title}</p>
               <p className="mt-sm text-sm text-BLG400">{x.published}</p>
               <p className="mt-md flex gap-x-[5px] truncate">
-                {x.tags.map((x) => (
-                  <span key={x.id} className="text-sm text-BLG400">
-                    #{x.name}
+                {x.tags.map((el) => (
+                  <span key={el.id} className="text-sm text-BLG400">
+                    #{el.name}
                   </span>
                 ))}
               </p>
