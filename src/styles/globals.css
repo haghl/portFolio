@@ -93,6 +93,11 @@ a {
   width: calc(33.3333% - 10px);
   box-shadow: 0px 0px 7px #b0b8c1;
   box-sizing: border-box;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+}
+.PostListItem:hover {
+  transform: translateY(-4px);
 }
 .Img img {
   width: 100%;

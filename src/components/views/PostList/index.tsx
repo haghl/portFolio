@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { IPosts } from '@/types/types'
-import { spawn } from 'child_process'
 
 interface IPostList {
   data: IPosts[]
