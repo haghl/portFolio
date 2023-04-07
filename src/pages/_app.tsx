@@ -1,4 +1,6 @@
-import '../styles/globals.css'
+import '@/styles/notionStyle.scss'
+import '@/styles/notion.default.css'
+import '@/styles/globals.css'
 
 import { RecoilRoot } from 'recoil'
 import type { AppProps } from 'next/app'

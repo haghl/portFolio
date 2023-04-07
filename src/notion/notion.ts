@@ -15,7 +15,11 @@ export const notion = new Client({
 })
 
 // 노션 비공식 API 초기화
-export const reactNotionApi = new NotionAPI()
+export const reactNotionApi = new NotionAPI({
+  activeUser: process.env.NOTION_USER,
+  authToken: process.env.NOTION_TOKEN_V2,
+  userLocale: 'ko-KR/autodetect',
+})
 
 export interface DatabaseQueryOption {
   categoryName?: string
