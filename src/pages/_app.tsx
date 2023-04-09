@@ -1,5 +1,7 @@
+import 'katex/dist/katex.min.css'
 import '@/styles/notionStyle.scss'
 import '@/styles/notion.default.css'
+import '@/styles/prism.css'
 import '@/styles/globals.css'
 
 import { RecoilRoot } from 'recoil'

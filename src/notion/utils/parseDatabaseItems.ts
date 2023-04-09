@@ -10,6 +10,8 @@ export const parseDatabaseItems = (databaseItems: Awaited<ReturnType<typeof getD
     const { id } = item
     const { 카테고리, 작성일, 이름, 태그 } = item.properties
 
+    console.log(item.properties)
+
     // 블로그 목록 데이터 가공
     const cover = item.cover?.type === 'external' ? item.cover.external.url : item.cover?.file ? item.cover.file.url : `none`
     const title = 이름?.type === 'title' ? 이름.title[0].plain_text : ''

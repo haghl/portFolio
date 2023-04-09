@@ -32,13 +32,13 @@ export const getDatabaseItems = async (databaseId: string, option?: DatabaseQuer
     database_id: databaseId,
     filter: {
       and: [
-        // {
-        //   property: propertyTable.Published,
-        //   status: {
-        //     // 공개인 포스팅만 가져오기
-        //     equals: '공개',
-        //   },
-        // },
+        {
+          property: propertyTable.Published,
+          select: {
+            // 공개인 포스팅만 가져오기
+            equals: '공개',
+          },
+        },
         {
           property: propertyTable.Category,
           select: {
@@ -55,6 +55,8 @@ export const getDatabaseItems = async (databaseId: string, option?: DatabaseQuer
       },
     ],
   })
+  console.log('데이터', databaseItems.results[0].properties)
+
   return databaseItems.results
 }
 
@@ -94,6 +96,7 @@ export const initBlogInfo = async (databaseId: string) => {
   const database = (await notion.databases.retrieve({
     database_id: databaseId,
   })) as DatabaseObjectResponse
+
   const title = database.title[0]?.type === 'text' ? database.title[0].plain_text : ''
   const description = database.description[0]?.type === 'text' ? database.description[0].plain_text : ''
   const coverURL = database.cover?.type === 'file' ? database.cover?.file.url : ''

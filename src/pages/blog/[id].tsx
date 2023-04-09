@@ -32,7 +32,6 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
 export const getStaticProps: GetStaticProps<IDetailsPage> = async ({ params }) => {
   // export const getServerSideProps: GetServerSideProps<IDetailsPage> = async ({ params }) => {
   const id = params?.id
-  console.log('idid', id?.toString())
 
   try {
     if (!id) throw Error('id is not defined')
@@ -55,8 +54,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = databaseItems.map(({ id }) => ({
     params: { id },
   }))
-
-  console.log('params', paths)
 
   return {
     paths,
