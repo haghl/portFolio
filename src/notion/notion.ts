@@ -55,7 +55,6 @@ export const getDatabaseItems = async (databaseId: string, option?: DatabaseQuer
       },
     ],
   })
-  console.log('데이터', databaseItems.results[0].properties)
 
   return databaseItems.results
 }
