@@ -12,7 +12,7 @@ const Category = ({ category }: IBlogCategory) => {
 
   return (
     <aside>
-      <ul className="dfcc gap-x-[8px]">
+      <ul className="max-w-full w-fit mx-auto dfc gap-x-[8px] overflow-x-auto">
         <li className={`CategoryItem ${pathname === '/' ? 'Active' : ''}`}>
           <Link href="/" className="dfcc px-category py-md border border-solid rounded-full border-BLG300 gap-x-[5px] fwb text-BLG500">
             <BsFillGridFill />

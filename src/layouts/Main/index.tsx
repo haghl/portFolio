@@ -4,9 +4,10 @@ import { motion } from 'framer-motion'
 import { pages } from '@/router'
 
 import { MainAnimation, xWidth } from './framer'
+import Banner from '@/components/views/Banner'
 
 const Main = ({ children }: { children: ReactNode }) => {
-  const { events, query } = useRouter()
+  const { events } = useRouter()
 
   const handleStart = useCallback((nextPath: string) => {
     const currentPath = window.location.pathname
@@ -22,8 +23,7 @@ const Main = ({ children }: { children: ReactNode }) => {
 
   return (
     <motion.main {...MainAnimation} className="pt-header pb-[100px]">
-      <div className="h-[300px] bg-primary">배너</div>
-      <div className="max-w-screen-lg mt-[50px] mx-auto">{children}</div>
+      <div>{children}</div>
     </motion.main>
   )
 }

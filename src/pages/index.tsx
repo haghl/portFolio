@@ -10,6 +10,7 @@ import { POSTS_PER_PAGE } from '@/notion/config'
 import { IBlogInfo, IPosts } from '@/types/types'
 import Category from '@/components/views/Category'
 import PostList from '@/components/views/PostList'
+import Banner from '@/components/views/Banner'
 
 interface IBlog {
   data: IPosts[]
@@ -33,8 +34,11 @@ const Home = ({ data, blogData }: IBlog) => {
   return (
     <>
       <PageHead />
-      <Category category={blogData.category?.options} />
-      <PostList data={postData} />
+      <Banner />
+      <div className="max-w-screen-lg mt-[50px] mx-auto">
+        <Category category={blogData.category?.options} />
+        <PostList data={postData} />
+      </div>
     </>
   )
 }

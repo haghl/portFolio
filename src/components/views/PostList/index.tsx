@@ -18,7 +18,7 @@ const PostList = ({ data }: IPostList) => {
               ) : (
                 <div className="Img border-b border-b-BLG300">
                   {/* <img src={x.cover} alt={`${x.id}_cover`} /> */}
-                  <Image src={x.cover} alt={`${x.id}_cover`} width={200} height={200} sizes="(max-width: 768px) 50vw, (max-width: 1024px) 100vw" />
+                  <Image src={x.cover} alt={`${x.id}_cover`} width={200} height={200} />
                 </div>
               )}
               <div className="p-lg pb-category">

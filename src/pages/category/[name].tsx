@@ -10,6 +10,7 @@ import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
 import type { IBlogInfo, IPosts } from '@/types/types'
 import { checkKorean } from '@/utils/checkKorean'
+import Banner from '@/components/views/Banner'
 
 interface ICateory {
   data: IPosts[]
@@ -29,8 +30,11 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
   return (
     <>
       <PageHead />
-      <Category category={blogData.category?.options} />
-      <PostList data={postData} />
+      <Banner />
+      <div className="max-w-screen-lg mt-[50px] mx-auto">
+        <Category category={blogData.category?.options} />
+        <PostList data={postData} />
+      </div>
     </>
   )
 }

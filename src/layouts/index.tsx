@@ -5,7 +5,7 @@ import Main from './Main'
 const LayOut = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <div className="relative mx-auto">
+      <div className="relative mx-auto ">
         <Header />
         <Main>{children}</Main>
       </div>

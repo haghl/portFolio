@@ -16,9 +16,10 @@ const theme = {
   ],
   theme: {
     screens: {
-      sm: '465px',
-      md: '768px',
-      lg: '1060px',
+      mobile: { max: '300px' },
+      sm: { max: '465px' },
+      md: { max: '768px' },
+      lg: { max: '1060px' },
     },
     colors: {
       yellow: '#F2BC07',
@@ -40,6 +41,7 @@ const theme = {
     width: {
       full: '100%',
       half: '50%',
+      fit: 'fit-content',
     },
     height: {
       header: layout.header,

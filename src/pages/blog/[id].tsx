@@ -19,12 +19,12 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
 
   if (isFallback) return <NotionSkeleton />
 
-  console.log(recordMap)
-
   return (
     <>
       <PageHead subTitle={pageTitle} />
-      <NotionRender recordMap={recordMap} />
+      <div className="max-w-screen-lg mx-auto">
+        <NotionRender recordMap={recordMap} />
+      </div>
     </>
   )
 }
