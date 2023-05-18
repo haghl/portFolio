@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <>
-      <div className="h-[300px] dfcc bg-primary text-center">
+      <div className="h-[300px] dfcc bg-primary text-center mobile:h-[200px]">
         <p className="banner_text fweb">
           <span>원</span>
           <span>동</span>

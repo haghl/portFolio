@@ -35,7 +35,7 @@ const Home = ({ data, blogData }: IBlog) => {
     <>
       <PageHead />
       <Banner />
-      <div className="max-w-screen-lg mt-[50px] mx-auto">
+      <div className="max-w-lg mt-[50px] mx-auto mobile:px-lg">
         <Category category={blogData.category?.options} />
         <PostList data={postData} />
       </div>

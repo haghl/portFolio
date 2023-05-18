@@ -16,10 +16,10 @@ const theme = {
   ],
   theme: {
     screens: {
-      mobile: { max: '300px' },
-      sm: { max: '465px' },
-      md: { max: '768px' },
-      lg: { max: '1060px' },
+      mobile: { min: '300px', max: '464px' },
+      sm: { min: '465px', max: '767px' },
+      md: { min: '768px', max: '1059px' },
+      lg: { min: '1060px' },
     },
     colors: {
       yellow: '#F2BC07',
@@ -38,10 +38,23 @@ const theme = {
       BLG700: '#8b95a1',
       BLG800: '#333D4B',
     },
+    maxWidth: {
+      full: '100%',
+      half: '50%',
+      fit: 'fit-content',
+      mobile: '300px',
+      sm: '465px',
+      md: '768px',
+      lg: '1060px',
+    },
     width: {
       full: '100%',
       half: '50%',
       fit: 'fit-content',
+      mobile: '300px',
+      sm: '465px',
+      md: '768px',
+      lg: '1060px',
     },
     height: {
       header: layout.header,

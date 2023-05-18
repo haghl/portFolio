@@ -22,7 +22,7 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
   return (
     <>
       <PageHead subTitle={pageTitle} />
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-lg mx-auto">
         <NotionRender recordMap={recordMap} />
       </div>
     </>

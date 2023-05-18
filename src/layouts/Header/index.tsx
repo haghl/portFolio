@@ -28,7 +28,7 @@ const Header = () => {
       {/* ----------------- 옵저버 ----------------- */}
 
       <header className={`w-full fixed ${bgColor ? 'bg-primary bg-opacity-50' : ''} z-10`}>
-        <div className="max-w-screen-lg h-header mx-auto dfc justify-between sm:max-w-full sm:px-md">
+        <div className="max-w-lg h-header mx-auto px-xlg dfc justify-between sm:max-w-full sm:px-md">
           <Link href="/" className="fweb dfc text-head_sm">
             <Image src={Logo} width={40} height={40} alt="로고" />
             어쩔Log
